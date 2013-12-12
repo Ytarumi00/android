@@ -1,12 +1,11 @@
 package jp.eclipsebook;
 
+import android.os.Bundle;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.view.*;
-import android.view.View;
-import android.widget.*;
 //import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -14,15 +13,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		Button btn = (Button)this.findViewById(R.id.button1);
-		btn.setOnClickListener(
-			new View.OnClickListener() {
-				public void onClick(View v) {
-					TextView text1 = (TextView)findViewById(R.id.text1);
-					text1.setText("ok!");
-				}
-			}
-		);
-		setContentView(btn);
+	}
+
+	public void doAction(View view){
+		TextView text1 = (TextView)this.findViewById(R.id.text1);
+		text1.setText("OK!");
 	}
 }
