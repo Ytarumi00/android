@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/text1"
-        android:text="@string/Button_label" />
+        android:text="@string/Button_label"
+        android:onClick="doAction" />
 
 </RelativeLayout>
