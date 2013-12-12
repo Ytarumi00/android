@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.*;
 import android.widget.*;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -17,7 +18,7 @@ public class MainActivity extends Activity {
 	public void doAction(View view){
 		EditText edit1 = (EditText)this.findViewById(R.id.editText1);
 		Editable str = edit1.getText();
-		TextView text1 = (TextView)this.findViewById(R.id.text1);
-		text1.setText("you typed: " + str);
+		Toast toast = Toast.makeText(this, "you typed: " + str, Toast.LENGTH_SHORT);
+		toast.show();
 	}
 }
